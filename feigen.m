@@ -4,14 +4,15 @@ clc;
 
 r=2;
 u=0.1;
-offset=2;
+offset=0;
 x_init=0.1;
 numU=500;
-u=offset+linspace(0,2,numU);
+numI=500;
+u=offset+linspace(0,4,numU);
 count = 1;
 for k=1:numU
 x=x_init;
-for i=1:numU
+for i=1:numI
     %x = 1 - u(k)*abs(x).^r;
     x = u(k)*x*(1-x);
   if i > 200
